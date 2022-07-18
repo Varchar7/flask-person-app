@@ -1,0 +1,36 @@
+{% extends "page.html" %} {% block body %}
+<div class="">
+  <form action="" method="post">
+    <div class="container shadow-lg my-2">
+      <h1>Add User</h1>
+      <input
+        type="text"
+        name="name"
+        id="name"
+        class="form-control my-2"
+        placeholder="Name"
+      /><input
+        type="text"
+        name="email"
+        id="email"
+        class="form-control my-2"
+        placeholder="email"
+      /><input
+        type="text"
+        name="age"
+        id="age"
+        class="form-control my-2"
+        placeholder="age"
+      /><input
+        type="text"
+        name="number"
+        id="number"
+        class="form-control my-2"
+        placeholder="mobile number"
+      />
+      <button class="btn btn-success my-3 mx-1" type="submit">Save</button>
+      <button class="btn btn-success my-3 mx-1" type="reset">Reset</button>
+    </div>
+  </form>
+</div>
+{% endblock %}

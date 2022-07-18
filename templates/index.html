@@ -1,0 +1,22 @@
+{% extends "page.html" %} {% block body %}
+<div class="">
+  <h1>Lorem ipsum dolor sit amet consectetur.</h1>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis atque
+    officiis saepe aperiam quia repudiandae minima dolore et, harum illo eum
+    quas fugit est architecto obcaecati, quis libero impedit. Officia.
+  </p>
+  <div class="row">
+    {% for person in response %}
+    <div class="col-sm-6 col-md-6 col-lg-4">
+      <div class="container shadow rounded my-2">
+        <h1>{{ person[1] }}</h1>
+        <h2>{{ person[2] }}</h2>
+        <h3>{{ person[3] }}</h3>
+        <h3>{{ person[4] }}</h3>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}

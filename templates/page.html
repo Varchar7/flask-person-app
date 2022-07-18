@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lookie</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static',filename='css/bootstrap.min.css') }}"
+    />
+    <style>
+      .footer {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+      }
+      body {
+        background: #2a2e32;
+      }
+
+      .text-small {
+        font-size: 0.9rem;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+        transition: all 0.3s;
+      }
+
+      a:hover,
+      a:focus {
+        text-decoration: none;
+      }
+
+      .form-control {
+        color: #fff;
+        background: #212529;
+        border-color: #545454;
+      }
+
+      .form-control:focus {
+        color: #fff;
+        background: #212529;
+      }
+
+      footer {
+        background: #212529;
+      }
+
+      /* ==========================================
+          CUSTOM UTILS CLASSES
+        ========================================== */
+      body,
+      html {
+        height: 100%;
+        color: #ffffff;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <h2>
+          <a class="navbar-brand mx-3" href="#">Flisky</a>
+        </h2>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#collapsibleNavbar"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/"
+                >Home <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/look">Look</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="navbarDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Dropdown
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="#">Action</a>
+                <a class="dropdown-item" href="#">Another action</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#">Something else here</a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#">Disabled</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div class="container my-3">{% block body %} {% endblock %}</div>
+    <!-- FOOTER -->
+    <footer class="w-100 py-4 flex-shrink-0 footer">
+      <div class="container py-4">
+        <div class="row gy-4 gx-5">
+          <div class="col-lg-4 col-md-6">
+            <h5 class="h1 text-white">FB.</h5>
+            <p class="small text-light">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt.
+            </p>
+            <p class="small text-light mb-0">
+              &copy; Copyrights. All rights reserved.
+            </p>
+          </div>
+          <div class="col-lg-2 col-md-6">
+            <h5 class="text-white mb-3">Quick links</h5>
+            <ul class="list-unstyled text-light">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Get started</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-2 col-md-6">
+            <h5 class="text-white mb-3">Quick links</h5>
+            <ul class="list-unstyled text-light">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Get started</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <h5 class="text-white mb-3">Newsletter</h5>
+            <p class="small text-light">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt.
+            </p>
+            <form action="#">
+              <div class="input-group mb-3">
+                <input
+                  class="form-control"
+                  type="text"
+                  placeholder="Recipient's username"
+                  aria-label="Recipient's username"
+                  aria-describedby="button-addon2"
+                />
+                <button
+                  class="btn btn-primary"
+                  id="button-addon2"
+                  type="button"
+                >
+                  Subscribe
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+  <script src="{{ url_for('static',filename='js/bootstrap.min.js') }}"></script>
+  <script src="{{ url_for('static',filename='js/bootstrap.bundle.min.js') }}"></script>
+</html>
