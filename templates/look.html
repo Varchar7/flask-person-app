@@ -5,20 +5,31 @@
       <h1>Add User</h1>
       <input
         type="text"
+        name="id"
+        id="id"
+        value="{{response[0]}}"
+        class="d-none"
+        placeholder="id"
+      />
+      <input
+        type="text"
         name="name"
         id="name"
+        value="{{response[1]}}"
         class="form-control my-2"
         placeholder="Name"
       /><input
         type="text"
         name="email"
         id="email"
+        value="{{response[2]}}"
         class="form-control my-2"
         placeholder="email"
       /><input
         type="text"
         name="age"
         id="age"
+        value="{{response[3]}}"
         class="form-control my-2"
         placeholder="age"
       /><input
@@ -26,6 +37,7 @@
         name="number"
         id="number"
         class="form-control my-2"
+        value="{{response[4]}}"
         placeholder="mobile number"
       />
       <button class="btn btn-success my-3 mx-1" type="submit">Save</button>

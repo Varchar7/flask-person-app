@@ -8,12 +8,20 @@
   </p>
   <div class="row">
     {% for person in response %}
-    <div class="col-sm-6 col-md-6 col-lg-4">
-      <div class="container shadow rounded my-2">
-        <h1>{{ person[1] }}</h1>
-        <h2>{{ person[2] }}</h2>
-        <h3>{{ person[3] }}</h3>
-        <h3>{{ person[4] }}</h3>
+    <div class="col-sm-6 col-md-6 col-lg-3">
+      <div class="container shadow rounded py-2 position-relative">
+        <form action="/{{person[0]}}" method="get">
+          <input type="text" class="d-none" name="type" value="delete" />
+          <div class="close-btn">
+            <button type="submit" class="btn">&#10006;</button>
+          </div>
+        </form>
+        <a href="/{{person[0]}}">
+          <h3>{{ person[1] }}</h3>
+          <h4>{{ person[2] }}</h4>
+          <h5>{{ person[3] }}</h5>
+          <h5>{{ person[4] }}</h5>
+        </a>
       </div>
     </div>
     {% endfor %}
